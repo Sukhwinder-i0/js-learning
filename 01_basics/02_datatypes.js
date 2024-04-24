@@ -1,5 +1,7 @@
 "use  strict"; // treat all js code as newer  version
 
+
+
 // alert(5 + 6) // we are using node.js not browser 
 
 // code readability should high
@@ -19,5 +21,7 @@
 
 console.log(typeof undefined); // undefined
 console.log(typeof null); // OBJECT
+
+console.log(typeof "Suikhwinder Singh");
 
 
