@@ -44,9 +44,33 @@ let myObj = {
 
 
 
-// *************************************************************************
+// Stack (primitive) :-> get a copy of variable declared
 
-// MEMORY
+// Heap (non-primitive) :-> reference to original  value (change in original value)
 
-// Stack (primitive),  Heap (non-primitive)
 
+// STACK MEMORY EXAMPLE (1) :--->
+
+let myInsta = "@sukhwinder.7i";
+
+let anotherInsta = myInsta; // Copy taken not original value
+
+anotherInsta = "@myzx_media"; // changes in copy
+
+console.log(myInsta);
+console.log(anotherInsta);
+
+// HEAP MEMORY EXAMPLE (2) :--->
+
+
+let userOne = {
+    email: "user.one123@gmail.com" ,
+    upi: "user123@ybl"
+}
+
+ let userTwo = userOne // refers to original value
+
+ userTwo.email = "user.two@gmail.com" // chnage in otigial value
+
+ console.log(userOne.email)
+ console.log(userTwo.email);
