@@ -7,7 +7,7 @@ const repoCount = 10
 
 console.log(`My name is ${name.toUpperCase()} and my repo count is ${repoCount}`);
 
-const gameName = new String("MyzX-mediA")
+const gameName = new String("MyzX-mediA-Production")
 
 console.log(gameName);
 console.log(gameName[9].toLowerCase());
@@ -30,3 +30,20 @@ console.log(newGame);
 const anotherGame = gameName.slice(-6); // can take negative values
 
 console.log(anotherGame);
+
+const newString0 = "  Sukhwinder Singh   "
+
+console.log(newString0);
+console.log(newString0.trim());
+
+const url = "https://www.sukhwinder%20singh.com"
+
+console.log(url.replace('%20', '-'));
+
+console.log(url.includes('MyzX'));
+
+console.log(gameName.split('-')); // split on the bases of dashes(-)
+
+
+
+
