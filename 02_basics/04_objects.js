@@ -75,3 +75,53 @@ console.log(Object.entries(tinderUser));  // Makes arrays of keys and values
 
 console.log(tinderUser.hasOwnProperty('Name'));
 console.log(tinderUser.hasOwnProperty('id'));
+
+
+
+
+// ********************* OBJECTS: DE-STRUCTURING  ******************************************//
+
+const course = {
+    courseName: "JS",
+    price: 999,
+    courseInstructor: "Sukhwinder Singh"
+}
+
+// extarcting values 
+
+//console.log(course.courseInstructor);
+
+// const {courseInstructor} = course;
+// console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course;   // can give a seperate name
+console.log(instructor); 
+
+
+
+// *******************  JSON  *********************************//
+
+// -->  written in {} but not have name 
+// -->  Keys and Values are STRINGS
+
+// {
+//     "name" : "Sukhwinder Singh",
+//     "coursename" : "JS",
+//     "price": 0
+// }
+
+// example:-->  https://api.github.com/users/hiteshchoudhary
+
+//fetch API -->> get DATA -->> convert to OBJECT -->>  get one by one values
+
+// many times API gets in form of ARRAYS  
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+
+// JSON formater tool -->> to study APIs data
+
