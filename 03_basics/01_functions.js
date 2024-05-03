@@ -77,10 +77,68 @@ function  loginUserMessage2(username = "Abc") {
     return `${username}, just logged in`
 }
 
-console.log(loginUserMessage2());
-
-console.log(loginUserMessage2("Sukhwinder Singh"));
-
+// console.log(loginUserMessage2());
+// console.log(loginUserMessage2("Sukhwinder Singh"));
 
 
 
+
+// *******************************************************************************************//
+
+
+// rest operator (...)  --->>  gives a array of all values after ... //
+
+function calculateCartPrice(...num) {
+    return num;
+}
+
+console.log(calculateCartPrice(190, 199, 200, 500)); 
+
+
+// OR // interview Question what will be the output 
+
+function calculateCartPrice2(val1, val2, ...num) {    
+    return num;
+}
+
+console.log(calculateCartPrice2(190, 199, 200, 500));    // output -- >> [ 200, 500 ]
+
+
+// ---------------------------------------//
+// Passing object in function
+
+const product = {
+    productName: "T-Shirts",
+    location: "Greater Noida", 
+    price: "199"
+}
+
+function handleObject(anyobject) {
+    console.log(`${anyobject.productName} are available in ${anyobject.location} for ${anyobject.price} rupees`)
+}
+
+handleObject(product);
+
+// OR Directly passing object in function //
+
+handleObject ({
+    productName: "Shirts",
+    location: "Delhi",
+    price: 399
+
+})
+
+
+// ********* Passing ARRAYS in FUNCTIONS ****************//
+
+const myArr = [1, 4, 3, 8, 5] 
+
+function returnSecondVal(anyarray) {
+    return `second value is ${anyarray[1]}`
+}
+
+console.log(returnSecondVal(myArr))
+
+// Passing directly //
+
+console.log(returnSecondVal([100, 400, 200, 300]))
