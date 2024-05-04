@@ -70,7 +70,7 @@ console.log(loginUserMessage());
 // --------------------------//
 
 function  loginUserMessage2(username = "Abc") {
-    if(!username) {                       // <<-- professional  way or -->> (username === undefined)
+    if(!username) {                                // <<-- professional  way or -->> (username === undefined)
         console.log("Please Enter a username");
         return;
     }
@@ -95,7 +95,7 @@ function calculateCartPrice(...num) {
 console.log(calculateCartPrice(190, 199, 200, 500)); 
 
 
-// OR // interview Question what will be the output 
+// OR // interview Question: what will be the output?
 
 function calculateCartPrice2(val1, val2, ...num) {    
     return num;
