@@ -54,10 +54,10 @@ let result2 = addSum(10, 2)
 
 //                            val1 = 10;
 //                            val1 = 5;      
-//                            addSum ------>>         _______________________________
-//                                                   [                               ]
-//                                                   [   new variable environment    ]
-//                                                   [              +                ]
+//                            addSum -------------->  _______________________________
+//                            result1 = 15;          [                               ]
+//                            result =  12           [   new variable environment    ]
+//                                                   [              +                ]          -->> This new executional context is delted after its task to perform        
 //                                                   [    Execution thread           ]
 //                                                   [                               ]
 //                                                    -------------------------------
@@ -73,6 +73,60 @@ let result2 = addSum(10, 2)
 //              val2 = undefined                                              ( EXCECUTION Context )
 //              total = undefined                                                      num1 = 10   
 //                                                                                     num2 = 5   
-//                                                                                     total = 15
+//                                                                                     total = 15 --------->> returned back in Global EC (parents EC)
 //                                                                                     
 
+// new variable Environment for 'result2'  -------->
+
+//                                 _______________________________
+//                                [                               ]
+//                                [   new variable environment    ]
+//                                [              +                ]         
+//                                [    Execution thread           ]
+//                                [                               ]
+//                                 -------------------------------
+//                                                    |
+//                                                    |
+//                                                    |
+//                                                    |
+//          ---------------------------------------------------------------------------
+//         |                                                                           |
+//         |                                                                           |
+//    (MEMEORY PHASE):                                                                 |
+//              val1 = undefined                                                       |
+//              val2 = undefined                                              ( EXCECUTION Context )
+//              total = undefined                                                      num1 = 10   
+//                                                                                     num2 = 2  
+//                                                                                     total = 12                                                                                 
+
+
+
+
+//  ***************************  CALL STACK  ********************************//
+//
+//                                   _______________
+//                                  [                ]           // LIFO ---- Last in first out
+//                                  [     Three()    ]
+//                                  [                ]
+//                                  [     Two()      ]
+//                                  [                ]
+//                                  [     One()      ]
+//                                  [________________]
+//                                  [    Global Ec   ]
+//                                   ----------------
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
