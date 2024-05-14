@@ -29,4 +29,36 @@ if (userEmail2) {
 // ************* TRUTHY Values *************************//
 // Strings and all non Falsy val are truthy
 
-// "0", 'false', " ", [], {}, function(){}, 
+// "0", 'false', " ", [], {}, function(){}
+
+const emptyObj = {}
+
+if (Object.keys(emptyObj).length === 0) {
+    console.log("Empty Object");
+}
+
+
+// false == 0    ---> true
+// false == ''   ---> true
+// 0 == ''       ---> true 
+
+
+// Nullish Coalescing Operator (??) : null , undefined
+
+let val1 = 43
+
+// val1 = 5 ?? null                       --> 5 (first value)
+// val1 = undefined ??  null ?? 4         --> 4
+// val1 = null ?? undefined               --> undefined 
+// val1 = undefined ?? null               --> null
+
+// console.log(val1);
+
+
+//************* TERNARY operator ***************//
+
+// condition ? true : false
+
+const age = 27;
+
+age >= 18 ? console.log("Can Vote") : console.log("Can't vote")
